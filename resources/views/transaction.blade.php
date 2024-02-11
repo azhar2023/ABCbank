@@ -9,7 +9,7 @@
                 <hr>
                 <br>
 
-                <form method="POST" action="{{ route('transfer-store') }}">
+                <form method="POST" action="{{ route('transfer-store') }}" enctype="multipart/form-data">
                     @csrf
 
                     <div>
@@ -20,6 +20,11 @@
                     <div>
                         <x-input-label for="amount" :value="__('AMOUNT')" />
                         <x-text-input placeholder="Enter Amount" id="amount" class="block mt-1 w-full" type="number" name="amount"  required  />
+                    </div>
+
+                    <div>
+                        <x-input-label for="file" :value="__('FILE')" />
+                        <x-text-input placeholder="Enter File" id="file" class="block mt-1 w-full" type="file" name="file"   />
                     </div>
             
                     <div class="flex items-center justify-end mt-8">

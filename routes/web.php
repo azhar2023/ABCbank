@@ -53,6 +53,9 @@ Route::middleware('auth')->group(function () {
 
      Route::get('/statement', [UserAccountController::class, 'statement'])->name('statement');
 
+     
+     Route::post('/statement-update', [UserAccountController::class, 'statementupdate'])->name('statement-update');
+
 
 
 
